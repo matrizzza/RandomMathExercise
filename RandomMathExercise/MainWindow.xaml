@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomMathExercise"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MathGame" Height="350" Width="525" ResizeMode="NoResize">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Stretch" 
+                   Height="Auto" 
+                   Margin="0"
+                   VerticalAlignment="Top" 
+                   Width="Auto"
+                   Background="BurlyWood"
+                   Grid.Row="0">
+
+            <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                  Background="Chocolate"
+                  BorderBrush="Black"
+                  BorderThickness="2">
+                <MenuItem Header="Menu"
+                          FontSize="20"
+                          FontFamily="Ubuntu Mono">
+                    <MenuItem Header="New exercise" 
+                              Command="New"
+                              FontFamily="Ubuntu Mono"
+                              ></MenuItem>
+                </MenuItem>
+            </Menu>
+
+        </WrapPanel>
+        <TextBlock 
+            Name="ExerciseTextBlock"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top"
+            Margin="0,50,0,0"
+            Padding="5"
+            Background="BurlyWood"
+            Grid.Row="1" 
+            TextWrapping="Wrap" 
+            Text="(20 * 7) + 36 =" 
+            FontSize="40"
+            FontFamily="Ubuntu Mono"
+            Focusable="False"/>
+        <TextBox
+            Name="ResultTextBox"
+            Grid.Row="1"
+            Margin="0,140,0,0"
+            Padding="3"
+            BorderBrush="Black"
+            BorderThickness="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="40"
+            FontFamily="Ubuntu Mono"
+            Width="100"
+            Background="BurlyWood">
         
+        </TextBox>
+
+        <TextBlock
+            Name="CongratsTextBlock"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,20"
+            Padding="3"
+            FontFamily="Ubuntu Mono"
+            FontSize="45"
+            Background="BurlyWood"
+            Visibility="Hidden"/>
+        <Button
+            Name="CheckButton"
+            Grid.Row="1"
+            Content="Check the answer!" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top"
+            Margin="0,160,50,0" 
+            Padding="5"
+            Background="AntiqueWhite"
+            Click="CheckButton_OnClick"
+            />
+
+
     </Grid>
 </Window>

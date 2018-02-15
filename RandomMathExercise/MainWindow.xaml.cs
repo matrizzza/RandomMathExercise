@@ -24,5 +24,10 @@ namespace RandomMathExercise
         {
             InitializeComponent();
         }
+
+        private void CheckButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
