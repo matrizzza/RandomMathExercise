@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomMathExercise"
         mc:Ignorable="d"
-        Title="MathGame" Height="350" Width="525" ResizeMode="NoResize">
+        Title="MathGame" Height="350" Width="525" ResizeMode="NoResize" KeyDown="MainWindow_OnKeyDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -43,7 +43,7 @@
             Background="BurlyWood"
             Grid.Row="1" 
             TextWrapping="Wrap" 
-            Text="(20 * 7) + 36 =" 
+            Text="        "
             FontSize="40"
             FontFamily="Ubuntu Mono"
             Focusable="False"/>
@@ -59,7 +59,8 @@
             FontSize="40"
             FontFamily="Ubuntu Mono"
             Width="100"
-            Background="BurlyWood">
+            Background="BurlyWood"
+            GotFocus="ResultTextBox_OnGotFocus">
         
         </TextBox>
 
@@ -83,6 +84,8 @@
             Margin="0,160,50,0" 
             Padding="5"
             Background="AntiqueWhite"
+            FontFamily="Ubuntu Mono"
+            
             Click="CheckButton_OnClick"
             />
 
